@@ -33,7 +33,7 @@ jobs:
     env:
       BRANCH_NAME: ${{ vars.BRANCH_NAME }}
 
-    environment: Notin-API
+    environment: Notion-API
       NOTION_SECRET: ${{ vars.SECRETS }}
 
     steps:
