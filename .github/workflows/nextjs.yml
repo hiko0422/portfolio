@@ -32,9 +32,6 @@ jobs:
     environment: github-pages
     env:
       BRANCH_NAME: ${{ vars.BRANCH_NAME }}
-
-    environment: Notion-API
-    env:
       NOTION_SECRET: ${{ vars.SECRETS }}
 
     steps:
