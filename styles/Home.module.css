@@ -7,6 +7,21 @@
   min-height: 100vh;
 }
 
+.profile{
+  display: inherit;
+}
+
+.me{
+  border-radius: 50%;
+}
+
+.works{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -49,14 +64,13 @@
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
+  background: rgba(var(--card-rgb), 0.1);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
   transition: background 200ms, border 200ms;
 }
-
 .card span {
   display: inline-block;
-  transition: transform 200ms;
+  transform: translateX(4px);
 }
 
 .card h2 {
@@ -70,6 +84,22 @@
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
+}
+.badge{
+  font-size:0.7rem;
+  border: solid 1px;
+  border-radius: 10%;
+  padding: 1px;
+}
+.badge.yellow{
+  background-color: yellow;
+}
+.badge.purple{
+  background-color: #83005b;
+  color:white;
+}
+.badge + .badge{
+  margin-left:2px;
 }
 
 .center {
@@ -109,14 +139,6 @@
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
 }
 
 @media (prefers-reduced-motion) {
